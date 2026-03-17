@@ -1,0 +1,34 @@
+while True:
+    meme_dict = {
+        "CRINGE": "Algo vergonhoso ou constrangedor",
+        "STALKEAR": "Investigar a vida de alguém online",
+        "VDD": "Abreviação da palavra verdade",
+        "BISCOITAR": "Postar algo apenas para chamar atenção",
+        "HATER": "Pessoa que critica constantemente os outros",
+        "VLW": "Abreviação de valeu",
+        "LOL": "Rir muito na internet",
+        "TBT": "Postar algo antigo ou lembrar do passado",
+        "SHIPPAR": "Torcer para duas pessoas ficarem juntas",
+        "FLOPAR": "Quando algo não faz sucesso"
+    }
+
+    print("\n--- DICIONÁRIO DE GÍRIAS ---")
+    print("Digite uma palavra (ou 'SAIR' para encerrar)")
+
+    word = input("Palavra: ").upper()
+
+    if word == "SAIR":
+        print("Encerrando o programa...")
+        break
+
+    if word in meme_dict:
+        print("Significado:", meme_dict[word])
+    else:
+        print("Essa palavra não está no dicionário.")
+        
+        adicionar = input("Deseja adicionar essa palavra? (S/N): ").upper()
+        
+        if adicionar == "S":
+            significado = input("Digite o significado: ")
+            meme_dict[word] = significado
+            print("Palavra adicionada com sucesso!")
